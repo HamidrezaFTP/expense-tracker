@@ -7,5 +7,60 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script defer src="./js/app.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1 class="title">Expense Tracker 💰</h1>
+      <div class="balance__section">
+        <h2 class="balance__title">Your Balance</h2>
+        <p id="balance" class="balance__amount">$0.00</p>
+      </div>
+      <div class="total__section">
+        <h2 class="total__title">Total Expense</h2>
+        <p class="total__amount">$0.00</p>
+      </div>
+      <div class="category__section">
+        <h2 class="category__title">Category Filter</h2>
+        <select class="category__filter">
+          <option value="all">All Categories</option>
+          <option value="food">Food</option>
+          <option value="transport">Transport</option>
+          <option value="housing">Housing</option>
+          <option value="entertainment">Entertainment</option>
+        </select>
+      </div>
+      <div class="add__section">
+        <h2 class="add__title">Add Transaction</h2>
+        <form class="transaction__form">
+          <input
+            type="text"
+            id="description"
+            class="transaction__description"
+            placeholder="Description"
+            required
+          />
+          <input
+            type="number"
+            id="amount"
+            class="transaction__amount"
+            placeholder="Amount"
+            required
+          />
+          <select id="category" class="transaction__category">
+            <option value="food">Food</option>
+            <option value="transport">Transport</option>
+            <option value="housing">Housing</option>
+            <option value="entertainment">Entertainment</option>
+          </select>
+          <input type="date" id="date" class="transaction__date" required />
+          <button type="submit" class="add__button">Add Expense</button>
+        </form>
+      </div>
+      <div class="spending__section">
+        <h2 class="spending__title">Spending by Category</h2>
+      </div>
+      <div class="transactions__section">
+        <h2 class="transactions__title">Transactions</h2>
+      </div>
+    </div>
+  </body>
 </html>
