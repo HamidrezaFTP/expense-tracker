@@ -10,56 +10,62 @@
   <body>
     <div class="container">
       <h1 class="title">Expense Tracker 💰</h1>
-      <div class="balance__section">
-        <h2 class="balance__title">Your Balance</h2>
+      <div class="section balance__section">
+        <h2 class="section__title">Your Balance</h2>
         <p id="balance" class="balance__amount">$0.00</p>
       </div>
-      <div class="total__section">
-        <h2 class="total__title">Total Expense</h2>
-        <p class="total__amount">$0.00</p>
+      <div class="summary__section">
+        <div class="section total__section">
+          <h2 class="section__title">Total Expense</h2>
+          <p class="total__amount">$0.00</p>
+        </div>
+        <div class="section category__section">
+          <h2 class="section__title">Category Filter</h2>
+          <select class="category__filter">
+            <option class="category__option" value="all">All Categories</option>
+            <option class="category__option" value="food">Food</option>
+            <option class="category__option" value="transport">
+              Transport
+            </option>
+            <option class="category__option" value="housing">Housing</option>
+            <option class="category__option" value="entertainment">
+              Entertainment
+            </option>
+          </select>
+        </div>
       </div>
-      <div class="category__section">
-        <h2 class="category__title">Category Filter</h2>
-        <select class="category__filter">
-          <option value="all">All Categories</option>
-          <option value="food">Food</option>
-          <option value="transport">Transport</option>
-          <option value="housing">Housing</option>
-          <option value="entertainment">Entertainment</option>
-        </select>
-      </div>
-      <div class="add__section">
-        <h2 class="add__title">Add Transaction</h2>
+      <div class="section add__section">
+        <h2 class="section__title">Add Transaction</h2>
         <form class="transaction__form">
           <input
             type="text"
             id="description"
-            class="transaction__description"
+            class="transaction__input"
             placeholder="Description"
             required
           />
           <input
             type="number"
             id="amount"
-            class="transaction__amount"
+            class="transaction__input"
             placeholder="Amount"
             required
           />
-          <select id="category" class="transaction__category">
+          <select id="category" class="transaction__input">
             <option value="food">Food</option>
             <option value="transport">Transport</option>
             <option value="housing">Housing</option>
             <option value="entertainment">Entertainment</option>
           </select>
-          <input type="date" id="date" class="transaction__date" required />
+          <input type="date" id="date" class="transaction__input" required />
           <button type="submit" class="add__button">Add Expense</button>
         </form>
       </div>
-      <div class="spending__section">
-        <h2 class="spending__title">Spending by Category</h2>
+      <div class="section spending__section">
+        <h2 class="section__title">Spending by Category</h2>
       </div>
-      <div class="transactions__section">
-        <h2 class="transactions__title">Transactions</h2>
+      <div class="section transactions__section">
+        <h2 class="section__title">Transactions</h2>
       </div>
     </div>
   </body>
