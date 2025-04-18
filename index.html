@@ -12,16 +12,16 @@
       <h1 class="title">Expense Tracker 💰</h1>
       <div class="section balance__section">
         <h2 class="section__title">Your Balance</h2>
-        <p id="balance-amount" class="balance__amount">$0.00</p>
+        <p id="balance" class="balance__amount">$0.00</p>
       </div>
       <div class="summary__section">
         <div class="section total__section">
           <h2 class="section__title">Total Expense</h2>
-          <p id="total-amount" class="total__amount">$0.00</p>
+          <p id="totalAmount" class="total__amount">$0.00</p>
         </div>
         <div class="section category__section">
           <h2 class="section__title">Category Filter</h2>
-          <select class="category__filter">
+          <select id="categoryFilter" class="category__filter">
             <option class="category__option" value="all">All Categories</option>
             <option class="category__option" value="food">Food</option>
             <option class="category__option" value="transport">
@@ -63,6 +63,7 @@
       </div>
       <div class="section spending__section">
         <h2 class="section__title">Spending by Category</h2>
+        <div id="spendings" class="spending__list"></div>
       </div>
       <div class="section transactions__section">
         <h2 class="section__title">Transactions</h2>

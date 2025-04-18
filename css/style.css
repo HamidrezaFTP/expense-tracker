@@ -101,6 +101,12 @@ body {
   background-color: #3a7bd5;
 }
 
+.transactions__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .transaction__item {
   display: flex;
   justify-content: space-between;
@@ -132,4 +138,25 @@ body {
   border: none;
   color: var(--expense-color);
   cursor: pointer;
+}
+
+.spending__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary__item {
+  padding: 1.5rem 1rem;
+  border-left: 4px solid var(--primary-color);
+  background: #f8f9fa;
+}
+
+.summary__name {
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+}
+
+.summary__amount {
+  font-size: 0.9rem;
 }
