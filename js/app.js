@@ -13,7 +13,7 @@ const updateLocalStorage = () => {
 
 const updateSummary = () => {
   const total = expenses.reduce((acc, expense) => acc + expense.amount, 0);
-  totalElement.textContent = `$${total.toFixed(2)}`;
+  totalElement.textContent = `$${total}`;
 
   const categories = expenses.reduce((acc, expense) => {
     acc[expense.category] = (acc[expense.category] || 0) + expense.amount;
@@ -27,7 +27,7 @@ const updateSummary = () => {
         <h4 class="summary__name">${
           category.charAt(0).toUpperCase() + category.slice(1)
         }</h4>
-        <span class="summary__amount">$${amount.toFixed(2)}</span>
+        <span class="summary__amount">$${amount}</span>
       </div>`
     )
     .join("");
@@ -35,7 +35,7 @@ const updateSummary = () => {
 
 const updateBalance = () => {
   const total = expenses.reduce((acc, expense) => acc + expense.amount, 0);
-  balanceElement.textContent = `$${total.toFixed(2)}`;
+  balanceElement.textContent = `$${total}`;
 };
 
 const renderTransactions = (filterCategory = "all") => {
@@ -50,12 +50,10 @@ const renderTransactions = (filterCategory = "all") => {
       <div class="transaction__item" data-id="${expense.id}">
         <div class="transaction__details">
           <h4 class="transaction__name">${expense.name}</h4>
-          <small class="transaction__meta">${expense.date} • ${
-        expense.category
-      }</small>
+          <small class="transaction__meta">${expense.date} • ${expense.category}</small>
         </div>
         <div class="transaction__info">
-          <span class="transaction__amount">$${expense.amount.toFixed(2)}</span>
+          <span class="transaction__amount">$${expense.amount}</span>
           <button class="delete-btn transaction__delete">×</button>
         </div>
       </div>`
