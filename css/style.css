@@ -160,3 +160,13 @@ body {
 .summary__amount {
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .transaction__form {
+    grid-template-columns: 1fr;
+  }
+
+  .summary__section {
+    flex-direction: column;
+  }
+}
