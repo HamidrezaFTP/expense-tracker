@@ -16,6 +16,7 @@ body {
 }
 
 .container {
+  width: 90%;
   max-width: 800px;
   margin: 0 auto;
   padding: 4rem 0;
@@ -161,10 +162,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .container {
-    max-width: 500px;
-  }
-
   .transaction__form {
     grid-template-columns: 1fr;
   }
